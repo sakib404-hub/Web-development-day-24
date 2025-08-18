@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finally Someone is Tring Document Object Modeling</title>
+    <link rel="stylesheet" href="styles/style2.css" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        We are learning DOM and I think learning DOM will be fun very much fun
+      </h1>
+    </header>
+    <main>
+      <section>
+        <h1>DOM is Fun</h1>
+        <ul>
+          <li class="foreign">Stan</li>
+          <li>Snop Dog</li>
+          <li class="foreign">Wiz Khalifa</li>
+          <li>Ankon</li>
+          <li id="band">Billie Ilish</li>
+        </ul>
+      </section>
+      <section>
+        <h1 id="food_title">Foods I love</h1>
+        <ul>
+          <li>Rice</li>
+          <li>Lentils</li>
+          <li class="foreign">Burgur</li>
+          <li>Pizza</li>
+          <li class="foreign">Pasta</li>
+          <li>Apple</li>
+          <li>Mangoes</li>
+        </ul>
+      </section>
+    </main>
+    <footer></footer>
+    <script>
+      // Getting Element Through Id
+      const getTitle = document.getElementById("food_title");
+      console.log(getTitle.innerText);
+      getTitle.innerText = "Food That Makes me Healthy";
+
+      //   Getting elements through id part -2
+      const bandElement = document.getElementById("band");
+      console.log(bandElement.innerText);
+      bandElement.innerText = "Billie Ilish Sleeping Band";
+
+      //   getting element through class
+      const foreignElements = document.getElementsByClassName("foreign");
+      console.log(foreignElements); //This Portion Particularyly Showing Nothing
+      for (let foreignElement of foreignElements) {
+        console.log(foreignElement.innerText);
+      }
+    </script>
+    <script src="js/hi.js"></script>
+  </body>
+</html>
