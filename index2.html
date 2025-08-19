@@ -13,7 +13,7 @@
       </h1>
     </header>
     <main>
-      <section>
+      <section class="songs">
         <h1>DOM is Fun</h1>
         <ul>
           <li class="foreign">Stan</li>
@@ -23,7 +23,7 @@
           <li id="band">Billie Ilish</li>
         </ul>
       </section>
-      <section>
+      <section class="food">
         <h1 id="food_title">Foods I love</h1>
         <ul>
           <li>Rice</li>
@@ -33,6 +33,25 @@
           <li class="foreign">Pasta</li>
           <li>Apple</li>
           <li>Mangoes</li>
+        </ul>
+      </section>
+      <section class="favourite_sports">
+        <h1>Select Your Favourite Sports</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+          <span>Oli Goli</span>
+          corporis!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur
+          <span>Bejurar Goli</span> adipisicing elit. Perferendis, doloribus?
+        </p>
+        <ul>
+          <li class="international">Cricket</li>
+          <li class="international">FoodBall</li>
+          <li>VollyBall</li>
+          <li>Hadudu</li>
+          <li>Kutkut</li>
         </ul>
       </section>
     </main>
@@ -54,6 +73,19 @@
       for (let foreignElement of foreignElements) {
         console.log(foreignElement.innerText);
       }
+
+      // Query Selector All
+      const spanElements = document.querySelectorAll(".favourite_sports span");
+      //Returns a nodelist thats why this console log will not work we will be looping through
+      // console.log(spanElements.innerText);
+      for (let spanElement of spanElements) {
+        console.log(spanElement.innerText);
+      }
+
+      // Only Query Selector
+      const spanElement = document.querySelector(".favourite_sports span");
+      //Will Provide me with the first value of what they get
+      console.log(spanElement.innerText);
     </script>
     <script src="js/hi.js"></script>
   </body>
