@@ -86,6 +86,23 @@
       const spanElement = document.querySelector(".favourite_sports span");
       //Will Provide me with the first value of what they get
       console.log(spanElement.innerText);
+
+      //Getting ELement Through ID
+      const foodElement = document.getElementById("food_title");
+      console.log(foodElement.innerText);
+      foodElement.innerText = "Food That will make you Healthy";
+      // changing the styling of my documnet through  below
+      //We can do the css styling with connecting the javascript with DOM
+      foodElement.style.color = "red";
+      // foodElement.style.backgroundColor = "blue";
+      foodElement.style.border = "0px solid yellow";
+      foodElement.style.borderRadius = "0px";
+      foodElement.style.padding = "0px";
+      foodElement.style.marginLeft = "30px";
+      foodElement.classList.add("bg-red");
+      foodElement.classList.remove("bg-red");
+      foodElement.getAttribute("id");
+      foodElement.getAttribute("class");
     </script>
     <script src="js/hi.js"></script>
   </body>
