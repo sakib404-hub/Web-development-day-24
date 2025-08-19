@@ -26,3 +26,25 @@ console.log(jambura);
 for (let jam of jambura) {
   jam.classList.add("jambura");
 }
+
+//Seeing how to apply the child node
+const players =
+  document.getElementById("players_container").childNodes[3].childNodes;
+console.log(players);
+
+//Application of the parent Node getting the parent node
+const player =
+  document.getElementById("players_container").parentNode.parentNode;
+console.log(player);
+
+// Creating an Element
+const newChild = document.createElement("li");
+newChild.innerText = "Hellow Beautiful World";
+// console.log(newChild);
+
+// finding the parent where i will add the child
+const playerList = document.getElementById("players_list");
+console.log(playerList);
+
+// append the child to the parent
+playerList.appendChild(newChild);
