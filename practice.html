@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tour of DOM</title>
+    <style>
+      h1 {
+        color: gold;
+      }
+      #food-title {
+        color: green;
+      }
+      .food .foreign {
+        /* background-color: red; */
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>This is My header with no Banner</h1>
+    </header>
+    <main>
+      <section>
+        <h1>Tour of Document Obejct Modeling</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus voluptas obcaecati officia, rem, sint distinctio
+          nostrum ut veritatis quo nemo iure ad molestiae modi unde culpa
+          laboriosam totam pariatur eum.
+        </p>
+        <ul>
+          <li>Shakib Hossen</li>
+          <li>Akib Hossen</li>
+          <li>Ariyan Ahmed</li>
+        </ul>
+      </section>
+      <section id="puran-dhaka" class="food">
+        <h1 id="food-title">The foods that i love</h1>
+        <ul>
+          <li>Rice</li>
+          <li>Potate</li>
+          <li>Fish</li>
+          <li class="foreign">Lentils</li>
+          <li class="foreign">Burgur</li>
+          <li class="foreign">Pizza</li>
+          <li id="pasta">Pasta</li>
+        </ul>
+      </section>
+    </main>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, illum?
+      Aliquid, error nihil! Minima dicta sunt at nulla aspernatur voluptatibus
+      porro eum ex nam, fuga fugiat, ipsum rem fugit. Ipsum!
+    </p>
+    <script>
+      console.log("Document Object Modeling");
+
+      const student = {
+        name: "Abul Mia",
+        id: 121,
+        study: function (subject) {
+          console.log(`Studying Subject ${subject}`);
+        },
+      };
+      // document.getElementsByTagName;
+      const liCollection = document.getElementsByTagName("li");
+      // Looping Through
+      for (let li of liCollection) {
+        // console.log(li.innerText);
+      }
+
+      // Gathering all the heading from the HTML document
+      const allHeading = document.getElementsByTagName("h1");
+      for (let heading of allHeading) {
+        // console.log(heading.innerText);
+      }
+      const allPeragraph = document.getElementsByTagName("p");
+      for (let peragraph of allPeragraph) {
+        // console.log(peragraph.innerText);
+      }
+    </script>
+    <script src="js/practice.js"></script>
+  </body>
+</html>
