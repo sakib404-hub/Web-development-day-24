@@ -47,3 +47,15 @@ console.log(title.style.color);
 
 //Therefore changing the background color with the help of DOM and js
 title.style.backgroundColor = "lightGreen";
+title.style.border = "2px solid black";
+title.style.borderRadius = "10px";
+title.style.padding = "10px";
+// console.log(title.classList);
+
+// working with the players section
+// console.log(document.getElementById("players-container").innerText);
+const players = document.getElementById("players-container");
+console.log(players.innerHTML);
+// players.innerText = "Tom";
+
+players.innerHTML = "<li>My Random Styling </li>"; // the  full section is changed to this
